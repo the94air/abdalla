@@ -1,0 +1,44 @@
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background: #ed999e;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.background {
+  background-image: url(http://cdn.vstack.dev/images/background.jpg?1529ebbacf8f936827c81cc8880ab885);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 100;
+}
+
+h1 {
+  font-size: 2em;
+}
+
