@@ -12,13 +12,7 @@ let mix = require('laravel-mix');
  */
 
 mix.setPublicPath("dist")
-  .setResourceRoot("http://cdn.vstack.dev/")
-	.options({
-		processCssUrls: true,
-		imgLoaderOptions: {
-			enabled: false
-		}
-	})
+	.setResourceRoot("http://cdn.vstack.dev/")
   .js("src/javascript/app.js", "dist/javascript")
   .sass("src/sass/app.scss", "dist/css");
 
