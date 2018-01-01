@@ -88,6 +88,12 @@ p {
   border-radius: 0.2em;
 }
 
+@media (min-width: 1024px) {
+  .hero {
+    padding: 20px 30px;
+  }
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -160,7 +166,7 @@ header {
     font-size: 60px;
     background-color: transparent;
     padding: 20px;
-    width: 300px;
+    width: 260px;
   }
 }
 
