@@ -14,7 +14,11 @@ let mix = require('laravel-mix');
 mix.setPublicPath("dist")
 	.setResourceRoot("http://cdn.vstack.dev/")
   .js("src/javascript/app.js", "dist/javascript")
-  .sass("src/sass/app.scss", "dist/css");
+  .sass("src/sass/app.scss", "dist/css")
+  .scripts([
+    "src/javascript/components/fontawesome.min.js",
+    "src/javascript/components/fa-brands.min.js",
+  ], "dist/javascript/icons.js");
 
 // Full API
 // mix.js(src, output);

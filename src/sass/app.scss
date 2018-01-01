@@ -1,3 +1,4 @@
+@import 'components/mixins';
 html {
     width: 100%;
     height: 100%;
@@ -8,26 +9,162 @@ html {
 body {
     height: 100%;
     margin: 0;
+    overflow: hidden;
+}
+::selection {
+    background: rgba(244, 127, 36, 0.5);
 }
 .background {
     background-image: url('../images/background.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     overflow: hidden;
     width: 100%;
     height: 100%;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: -1;
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Exo 2', sans-serif;
-    font-weight: 100;
+    font-weight: 600;
 }
 h1 {
-    font-size: 2em;
+    font-size: 3em;
+    margin: 0;
+    @include tablet {
+        font-size: 4em;
+    }
+    @include desktop {
+        font-size: 5em;
+    }
+}
+p {
+    font-family: 'Alegreya', serif;
+}
+.container {
+    margin: 0;
+    max-width: 1200px;
+    display: relative;
+    z-index: 1;
+    @include tablet {
+        margin: auto;
+    }
+    @include desktop {
+        margin: 70px auto;
+    }
+}
+.hero {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px 40px;
+    border-radius: 0.2em;
+}
+header {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    @include tablet {
+        flex-direction: column;
+    }
+    @include desktop {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+.header {
+    margin-bottom: 20px;
+    @include tablet {
+        margin-bottom: 20px;
+    }
+    @include desktop {
+        margin-bottom: 0;
+    }
+}
+.subtitle {
+    font-size: 1.39em;
+    margin: 0;
+}
+.social {
+    background-color: rgba(0, 0, 0, 0.12);
+    border-radius: 0.2em;
+    font-size: 40px;
+    padding: 15px;
+    @include tablet {
+        font-size: 70px;
+    }
+    @include desktop {
+        font-size: 60px;
+        background-color: transparent;
+        padding: 20px;
+        width: 300px;
+    }
+}
+.icons {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    @include tablet {
+        justify-content: space-around;
+    }
+    @include desktop {
+        align-items: center;
+        justify-content: space-between;
+    }
+    .icon {
+        text-align: center;
+        display: block;
+        &:first-child {
+            a {
+                background-color: #fff;
+                color: #1da1f2;
+                &:hover {
+                    background-color: #1da1f2;
+                    color: #fff;
+                    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+                }
+            }
+        }
+        &:nth-child(2) {
+            a {
+                background-color: #fff;
+                color: #24292f;
+                &:hover {
+                    background-color: #24292f;
+                    color: #fff;
+                    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+                }
+            }
+        }
+        &:last-child {
+            a {
+                background-color: #fff;
+                color: #f47f24;
+                &:hover {
+                    background-color: #f47f24;
+                    color: #fff;
+                    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+                }
+            }
+        }
+        a {
+            display: block;
+            background: #fff;
+            border-radius: 0.05em;
+            line-height: 1.2;
+            width: 54px;
+            height: 50px;
+            padding-top: 4px;
+            cursor: pointer;
+            @include tablet {
+                width: 90px;
+                height: 82px;
+            }
+            @include desktop {
+                width: 80px;
+                height: 72px;
+            }
+        }
+    }
 }

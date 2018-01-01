@@ -10,22 +10,26 @@ html {
 body {
   height: 100%;
   margin: 0;
+  overflow: hidden;
+}
+
+::-moz-selection {
+  background: rgba(244, 127, 36, 0.5);
+}
+
+::selection {
+  background: rgba(244, 127, 36, 0.5);
 }
 
 .background {
-  background-image: url(http://cdn.vstack.dev/images/background.jpg?77ad908819a7f2836651ce63266ba07c);
+  background-image: url(http://cdn.vstack.dev/images/background.jpg?9b7a76769ef1b7054af8b7e291a308f4);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   overflow: hidden;
   width: 100%;
   height: 100%;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: -1;
 }
 
 h1,
@@ -35,10 +39,227 @@ h4,
 h5,
 h6 {
   font-family: 'Exo 2', sans-serif;
-  font-weight: 100;
+  font-weight: 600;
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 3em;
+  margin: 0;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  h1 {
+    font-size: 4em;
+  }
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 5em;
+  }
+}
+
+p {
+  font-family: 'Alegreya', serif;
+}
+
+.container {
+  margin: 0;
+  max-width: 1200px;
+  display: relative;
+  z-index: 1;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    margin: auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    margin: 70px auto;
+  }
+}
+
+.hero {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 20px 40px;
+  border-radius: 0.2em;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (min-width: 1024px) {
+  header {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.header {
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .header {
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header {
+    margin-bottom: 0;
+  }
+}
+
+.subtitle {
+  font-size: 1.39em;
+  margin: 0;
+}
+
+.social {
+  background-color: rgba(0, 0, 0, 0.12);
+  border-radius: 0.2em;
+  font-size: 40px;
+  padding: 15px;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .social {
+    font-size: 70px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .social {
+    font-size: 60px;
+    background-color: transparent;
+    padding: 20px;
+    width: 300px;
+  }
+}
+
+.icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .icons {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+@media (min-width: 1024px) {
+  .icons {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.icons .icon {
+  text-align: center;
+  display: block;
+}
+
+.icons .icon:first-child a {
+  background-color: #fff;
+  color: #1da1f2;
+}
+
+.icons .icon:first-child a:hover {
+  background-color: #1da1f2;
+  color: #fff;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.icons .icon:nth-child(2) a {
+  background-color: #fff;
+  color: #24292f;
+}
+
+.icons .icon:nth-child(2) a:hover {
+  background-color: #24292f;
+  color: #fff;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.icons .icon:last-child a {
+  background-color: #fff;
+  color: #f47f24;
+}
+
+.icons .icon:last-child a:hover {
+  background-color: #f47f24;
+  color: #fff;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.icons .icon a {
+  display: block;
+  background: #fff;
+  border-radius: 0.05em;
+  line-height: 1.2;
+  width: 54px;
+  height: 50px;
+  padding-top: 4px;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .icons .icon a {
+    width: 90px;
+    height: 82px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .icons .icon a {
+    width: 80px;
+    height: 72px;
+  }
 }
 
