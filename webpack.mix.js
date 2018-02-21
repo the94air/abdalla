@@ -12,7 +12,7 @@ let mix = require('laravel-mix');
  */
 
 mix.setPublicPath("dist")
-	.setResourceRoot("http://abdalla.oo/dist/")
+	.setResourceRoot("https://abdalla.js.org/dist/")
   .js("src/javascript/app.js", "dist/javascript")
   .sass("src/sass/app.scss", "dist/css")
   .scripts([
