@@ -115,7 +115,6 @@ header {
           flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding-bottom: 30px;
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -178,7 +177,7 @@ header {
     font-size: 60px;
     background-color: transparent;
     padding: 20px;
-    width: 260px;
+    width: 100%;
   }
 }
 
@@ -197,21 +196,11 @@ header {
   padding: 0;
 }
 
-@media (min-width: 768px) and (max-width: 1023px) {
-  .icons {
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
-}
-
 @media (min-width: 1024px) {
   .icons {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -220,13 +209,20 @@ header {
   display: block;
 }
 
+@media (min-width: 1024px) {
+  .icons .icon {
+    padding: 25px;
+  }
+}
+
 .icons .icon:first-child a {
-  background-color: #fff;
+  background: #fff;
   color: #1da1f2;
 }
 
-.icons .icon:first-child a:hover {
-  background-color: #1da1f2;
+.icons .icon:first-child a:hover,
+.icons .icon:first-child a:focus {
+  background: #1da1f2;
   /* ff3.6+ */
   /* safari4+,chrome */
   /* safari5.1+,chrome10+ */
@@ -240,12 +236,13 @@ header {
 }
 
 .icons .icon:nth-child(2) a {
-  background-color: #fff;
+  background: #fff;
   color: #24292f;
 }
 
-.icons .icon:nth-child(2) a:hover {
-  background-color: #24292f;
+.icons .icon:nth-child(2) a:hover,
+.icons .icon:nth-child(2) a:focus {
+  background: #24292f;
   /* ff3.6+ */
   /* safari4+,chrome */
   /* safari5.1+,chrome10+ */
@@ -259,12 +256,13 @@ header {
 }
 
 .icons .icon:last-child a {
-  background-color: #fff;
+  background: #fff;
   color: #f47f24;
 }
 
-.icons .icon:last-child a:hover {
-  background-color: #f47f24;
+.icons .icon:last-child a:hover,
+.icons .icon:last-child a:focus {
+  background: #f47f24;
   /* ff3.6+ */
   /* safari4+,chrome */
   /* safari5.1+,chrome10+ */
@@ -284,14 +282,15 @@ header {
   line-height: 1.2;
   width: 54px;
   height: 50px;
-  padding-top: 4px;
   cursor: pointer;
+  padding-top: 4px;
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .icons .icon a {
     width: 90px;
     height: 82px;
+    padding-top: 0;
   }
 }
 
@@ -323,6 +322,18 @@ main {
 
 main p {
   font-size: 1.2em;
+}
+
+.main p {
+  padding: 20px 0;
+}
+
+@media (min-width: 1024px) {
+  .main p {
+    padding: 10px;
+    margin: 0;
+    font-size: 1.83em;
+  }
 }
 
 .contact {
@@ -363,10 +374,51 @@ main p {
           box-shadow: 0px 0px 3px #000 inset;
   border-radius: 0.1em;
   color: #fff;
+  -webkit-transition: -webkit-box-shadow 100ms ease;
+  transition: -webkit-box-shadow 100ms ease;
+  transition: box-shadow 100ms ease;
+  transition: box-shadow 100ms ease, -webkit-box-shadow 100ms ease;
+}
+
+.form input:focus,
+.form textarea:focus {
+  -webkit-box-shadow: 0px 0px 6px #000 inset;
+          box-shadow: 0px 0px 6px #000 inset;
+}
+
+.form textarea {
+  resize: none;
+  height: 139px;
+}
+
+.form button {
+  background: #ffea00;
+  color: #24292f;
+  border: none;
+  padding: 10px;
+  border-radius: 0.1em;
+  cursor: pointer;
+  -webkit-transition: color 100ms ease, background-color 100ms ease;
+  transition: color 100ms ease, background-color 100ms ease;
+}
+
+.form button:active,
+.form button:focus {
+  background: #24292f;
+  /* ff3.6+ */
+  /* safari4+,chrome */
+  /* safari5.1+,chrome10+ */
+  /* opera 11.10+ */
+  /* ie10+ */
+  background: linear-gradient(45deg, #24292f 0%, #16191C 100%);
+  /* w3c */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#16191C', endColorstr='#24292f',GradientType=1 );
+  /* ie6-9 */
+  color: #fff;
 }
 
 .form .form-field {
-  padding: 15px 0;
+  padding: 5px 0;
 }
 
 .form .form-field label {

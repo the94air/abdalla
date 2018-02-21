@@ -96,6 +96,25 @@ document.onmousemove = function (event) {
     });
 };
 
+document.getElementById('show-date').innerHTML = new Date().getFullYear();
+var coded = "MSr4zAHf@6hAHB.IOh";
+var key = "K0D9GpJwh8WF7OqfsxCXy4dNlkSiEgLVavuQ2tcz1eBT5Hn6PUA3mbZMIoRrYj";
+var shift = coded.length;
+var i = void 0,
+    ltr = void 0;
+var to = "";
+for (i = 0; i < coded.length; i++) {
+    if (key.indexOf(coded.charAt(i)) == -1) {
+        ltr = coded.charAt(i);
+        to += ltr;
+    } else {
+        ltr = (key.indexOf(coded.charAt(i)) - shift + key.length) % key.length;
+        to += key.charAt(ltr);
+    }
+}
+var ContactForm = document.getElementById('contact-from');
+ContactForm.action = 'https://formspree.io/' + to;
+
 /***/ }),
 /* 2 */
 /***/ (function(module, exports, __webpack_require__) {

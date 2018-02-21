@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="description" content="A Web Developer, Websites Designer & Utility-First Web Apps Developer.">
 	<title>Abdalla Arbab</title>
 	<link rel="stylesheet" type="text/css" href="dist/css/app.css">
 	<link href="https://fonts.googleapis.com/css?family=Exo+2:600,100|Alegreya" rel="stylesheet">
@@ -44,42 +47,41 @@
 					</div>
 					<aside>
 						<div class="contact">
-							<h2>Talk To Me</h2>
+							<h2>Hire Me</h2>
 							<p>If you want to ask me any thing or you have a project in mind... I am ready for it.</p>
-							<div class="form">
-								<div class="form-field">
-									<label for="name">Name</label>
-									<input type="text" name="name" id="name">
+							<form action="" method="post" id="contact-from">
+								<div class="form">
+									<div class="form-field">
+										<label for="name">Your Name</label>
+										<input type="text" name="name" id="name" required autofocus>
+									</div>
+									<div class="form-field">
+										<label for="email">Your Email</label>
+										<input type="email" name="_replyto" id="email" required>
+									</div>
+									<div class="form-field">
+										<label for="subject">The Subject</label>
+										<input type="text" name="_subject" id="subject" required>
+									</div>
+									<div class="form-field">
+										<label for="message">Say whatever you want</label>
+										<textarea name="message" id="message" minlength="12" required></textarea>
+									</div>
+									<div class="form-field">
+										<button type="submit">Send Me A Letter</button>
+									</div>
 								</div>
-								<div class="form-field">
-									<label for="email">Email</label>
-									<input type="email" name="email" id="email">
-								</div>
-								<div class="form-field">
-									<label for="subject">Subject</label>
-									<input type="text" name="subject" id="subject">
-								</div>
-								<div class="form-field">
-									<label for="message">Say what ever you want</label>
-									<textarea name="message" id="message"></textarea>
-								</div>
-								<div class="form-field">
-									<button type="submit">Send Me A Letter</button>
-								</div>
-							</div>
+							</form>
 						</div>
 					</aside>
 				</main>
 				<footer>
-					<small>&copy; Clear Desgin <span id="show-date"></span></small>
+					<small>&copy; Clear Design <span id="show-date"></span></small>
 				</footer>
 			</div>
 		</div>
 	</div>
 
 	<script src="dist/javascript/app.js"></script>
-	<script>
-		document.getElementById('show-date').innerHTML = new Date().getFullYear();
-	</script>
 </body>
 </html>
