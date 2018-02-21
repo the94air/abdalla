@@ -9,12 +9,13 @@
 </head>
 <body>
 
-	<div class="background">
+	<div>
+		<div class="background"></div>
 		<div class="container">
 			<div class="hero">
 				<header>
 					<div class="header">
-						<h1>Mr. Abdalla Arbab</h1>
+						<h1>Abdalla Arbab</h1>
 						<p class="subtitle">A Web Developer, Websites Designer & Utility-First Web Apps Developer.</p>
 					</div>
 					<div class="social">
@@ -37,10 +38,48 @@
 						</ul>	
 					</div>
 				</header>
+				<main>
+					<div class="main">
+						<p>It has been 4 years since I started programming and I am able to work with HTML, CSS, JavaScript, PHP and little bit of Python. I always make sure that my clients are happy with what I build and my solutions suits their needs. I also make sure that I am up to date with modern technologies <em>so...</em> I focus on performance, security and best practices while building websites. It is so important for me to get involved and collaborate in open source projects to keep the internet healthy and free and myself happy and motivated.</p>
+					</div>
+					<aside>
+						<div class="contact">
+							<h2>Talk To Me</h2>
+							<p>If you want to ask me any thing or you have a project in mind... I am ready for it.</p>
+							<div class="form">
+								<div class="form-field">
+									<label for="name">Name</label>
+									<input type="text" name="name" id="name">
+								</div>
+								<div class="form-field">
+									<label for="email">Email</label>
+									<input type="email" name="email" id="email">
+								</div>
+								<div class="form-field">
+									<label for="subject">Subject</label>
+									<input type="text" name="subject" id="subject">
+								</div>
+								<div class="form-field">
+									<label for="message">Say what ever you want</label>
+									<textarea name="message" id="message"></textarea>
+								</div>
+								<div class="form-field">
+									<button type="submit">Send Me A Letter</button>
+								</div>
+							</div>
+						</div>
+					</aside>
+				</main>
+				<footer>
+					<small>&copy; Clear Desgin <span id="show-date"></span></small>
+				</footer>
 			</div>
 		</div>
 	</div>
 
 	<script src="dist/javascript/app.js"></script>
+	<script>
+		document.getElementById('show-date').innerHTML = new Date().getFullYear();
+	</script>
 </body>
 </html>

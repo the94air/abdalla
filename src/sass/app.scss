@@ -1,15 +1,24 @@
 @import 'components/mixins';
+*, *::before, *::after {
+    box-sizing: border-box;
+}
 html {
     width: 100%;
     height: 100%;
     margin: 0;
-    background: #ed999e;
+    background: #fff8ab;
     box-sizing: border-box;
 }
 body {
+    font-family: 'Alegreya', serif;
+    font-size: 1.2em;
     height: 100%;
     margin: 0;
-    overflow: hidden;
+    // overflow-x: hidden;
+    // overflow-y: auto;
+    // @include desktop {
+    //     overflow-y: hidden;
+    // }
 }
 ::selection {
     background: rgba(244, 127, 36, 0.5);
@@ -19,10 +28,10 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    overflow: hidden;
+    position: fixed;
+    z-index: -1;
     width: 100%;
-    height: 100%;
+    min-height: 100%;
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Exo 2', sans-serif;
@@ -38,9 +47,6 @@ h1 {
         font-size: 5em;
     }
 }
-p {
-    font-family: 'Alegreya', serif;
-}
 .container {
     margin: 0;
     max-width: 1200px;
@@ -50,13 +56,17 @@ p {
         margin: auto;
     }
     @include desktop {
-        margin: 70px auto;
+        margin: auto;
+        padding: 55px;
     }
 }
 .hero {
     background-color: rgba(255, 255, 255, 0.5);
-    padding: 20px 40px;
+    padding: 20px 15px;
     border-radius: 0.2em;
+    @include tablet {
+        padding: 20px 30px;
+    }
     @include desktop {
         padding: 20px 30px;
     }
@@ -65,6 +75,7 @@ header {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    padding-bottom: 30px;
     @include tablet {
         flex-direction: column;
     }
@@ -124,8 +135,14 @@ header {
                 color: #1da1f2;
                 &:hover {
                     background-color: #1da1f2;
+                    background: -moz-linear-gradient(45deg, #1da1f2 0%, #1B93DE 100%); /* ff3.6+ */
+                    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #1da1f2), color-stop(100%, #1B93DE)); /* safari4+,chrome */
+                    background: -webkit-linear-gradient(45deg, #1da1f2 0%, #1B93DE 100%); /* safari5.1+,chrome10+ */
+                    background: -o-linear-gradient(45deg, #1da1f2 0%, #1B93DE 100%); /* opera 11.10+ */
+                    background: -ms-linear-gradient(45deg, #1da1f2 0%, #1B93DE 100%); /* ie10+ */
+                    background: linear-gradient(45deg, #1da1f2 0%, #1B93DE 100%); /* w3c */
+                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1B93DE', endColorstr='#1da1f2',GradientType=1 ); /* ie6-9 */
                     color: #fff;
-                    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
                 }
             }
         }
@@ -135,8 +152,14 @@ header {
                 color: #24292f;
                 &:hover {
                     background-color: #24292f;
+                    background: -moz-linear-gradient(45deg, #24292f 0%, #16191C 100%); /* ff3.6+ */
+                    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #24292f), color-stop(100%, #16191C)); /* safari4+,chrome */
+                    background: -webkit-linear-gradient(45deg, #24292f 0%, #16191C 100%); /* safari5.1+,chrome10+ */
+                    background: -o-linear-gradient(45deg, #24292f 0%, #16191C 100%); /* opera 11.10+ */
+                    background: -ms-linear-gradient(45deg, #24292f 0%, #16191C 100%); /* ie10+ */
+                    background: linear-gradient(45deg, #24292f 0%, #16191C 100%); /* w3c */
+                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#16191C', endColorstr='#24292f',GradientType=1 ); /* ie6-9 */
                     color: #fff;
-                    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
                 }
             }
         }
@@ -146,8 +169,14 @@ header {
                 color: #f47f24;
                 &:hover {
                     background-color: #f47f24;
+                    background: -moz-linear-gradient(45deg, #f47f24 0%, #DE7321 100%); /* ff3.6+ */
+                    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #f47f24), color-stop(100%, #DE7321)); /* safari4+,chrome */
+                    background: -webkit-linear-gradient(45deg, #f47f24 0%, #DE7321 100%); /* safari5.1+,chrome10+ */
+                    background: -o-linear-gradient(45deg, #f47f24 0%, #DE7321 100%); /* opera 11.10+ */
+                    background: -ms-linear-gradient(45deg, #f47f24 0%, #DE7321 100%); /* ie10+ */
+                    background: linear-gradient(45deg, #f47f24 0%, #DE7321 100%); /* w3c */
+                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#DE7321', endColorstr='#f47f24',GradientType=1 ); /* ie6-9 */
                     color: #fff;
-                    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
                 }
             }
         }
@@ -170,4 +199,62 @@ header {
             }
         }
     }
+}
+main {
+    display: flex;
+    flex-direction: column;
+    @include desktop {
+        flex-direction: row;
+    }
+    p {
+        font-size: 1.2em;
+    }
+}
+.main {
+    
+}
+aside {
+
+}
+.contact {
+    background: #5500bf;
+    background: -moz-linear-gradient(45deg, #5500bf 0%, #430094 100%); /* ff3.6+ */
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #5500bf), color-stop(100%, #430094)); /* safari4+,chrome */
+    background: -webkit-linear-gradient(45deg, #5500bf 0%, #430094 100%); /* safari5.1+,chrome10+ */
+    background: -o-linear-gradient(45deg, #5500bf 0%, #430094 100%); /* opera 11.10+ */
+    background: -ms-linear-gradient(45deg, #5500bf 0%, #430094 100%); /* ie10+ */
+    background: linear-gradient(45deg, #5500bf 0%, #430094 100%); /* w3c */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#430094', endColorstr='#5500bf',GradientType=1 ); /* ie6-9 */
+    color: #fff;
+    padding: 15px;
+    border-radius: 0.2em;
+    h2 {
+         margin: 0;
+    }
+}
+.form {
+    input, textarea, button {
+        font-family: inherit;
+        width: 100%;
+        font-size: 1.4em;
+    }
+    input, textarea {
+        padding: 6px;
+        margin-top: 5px;
+        background: #3c0087;
+        border: none;
+        box-shadow: 0px 0px 3px #000 inset;
+        border-radius: 0.1em;
+        color: #fff;
+    }
+    .form-field {
+        padding: 15px 0;
+        label {
+            font-family: inherit;
+        }
+    }
+}
+footer {
+    text-align: center;
+    padding-top: 20px;
 }
