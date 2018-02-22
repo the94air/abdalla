@@ -22,11 +22,13 @@ body {
 }
 
 ::-moz-selection {
-  background: rgba(244, 127, 36, 0.5);
+  background: #fff300;
+  color: #000;
 }
 
 ::selection {
-  background: rgba(244, 127, 36, 0.5);
+  background: #fff300;
+  color: #000;
 }
 
 .background {
@@ -46,12 +48,12 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Exo 2', sans-serif;
-  font-weight: 600;
+  font-family: 'Neuton', sans-serif;
+  font-weight: 700;
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 5.6em;
   margin: 0;
 }
 

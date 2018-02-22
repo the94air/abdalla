@@ -14,14 +14,10 @@ body {
     font-size: 1.2em;
     height: 100%;
     margin: 0;
-    // overflow-x: hidden;
-    // overflow-y: auto;
-    // @include desktop {
-    //     overflow-y: hidden;
-    // }
 }
 ::selection {
-    background: rgba(244, 127, 36, 0.5);
+    background: rgb(255, 243, 0);
+    color: #000;
 }
 .background {
     background-image: url('../images/background.jpg');
@@ -34,11 +30,11 @@ body {
     min-height: 100%;
 }
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Exo 2', sans-serif;
-    font-weight: 600;
+    font-family: 'Neuton', sans-serif;
+    font-weight: 700;
 }
 h1 {
-    font-size: 3em;
+    font-size: 5.6em;
     margin: 0;
     @include tablet {
         font-size: 4em;
