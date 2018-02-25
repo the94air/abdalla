@@ -6,13 +6,21 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta name="description" content="A Web Developer, Websites Designer & Utility-First Web Apps Developer.">
 	<title>Abdalla Arbab</title>
-	<link rel="stylesheet" type="text/css" href="dist/css/app.css">
+	<link rel="stylesheet" type="text/css" href="dist/css/app1.css">
 	<link href="https://fonts.googleapis.com/css?family=Neuton:700|Alegreya" rel="stylesheet">
 	<script defer src="dist/javascript/icons.js"></script>
+	<noscript>
+		<style>
+			body { overflow: auto; }
+			#loader { opacity: 0; pointer-events: none; }
+		</style>
+	</noscript>
 </head>
-<body>
+<body id="body">
 
-	<div>
+	<div class="loader" id="loader"></div>
+
+	<div class="content" id="content">
 		<div class="background"></div>
 		<div class="container">
 			<div class="hero">
@@ -77,11 +85,14 @@
 				</main>
 				<footer>
 					<small>&copy; Clear Design <span id="show-date"></span></small>
+					<script type="text/javascript">
+						document.getElementById('show-date').innerHTML = new Date().getFullYear();
+					</script>
 				</footer>
 			</div>
 		</div>
 	</div>
 
-	<script src="dist/javascript/app.js"></script>
+	<script src="dist/javascript/app1.js"></script>
 </body>
 </html>

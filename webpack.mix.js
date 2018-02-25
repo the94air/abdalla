@@ -13,8 +13,8 @@ let mix = require('laravel-mix');
 
 mix.setPublicPath("dist")
 	.setResourceRoot("https://abdalla.js.org/dist/")
-  .js("src/javascript/app.js", "dist/javascript")
-  .sass("src/sass/app.scss", "dist/css")
+  .js("src/javascript/app.js", "dist/javascript/app1.js")
+  .sass("src/sass/app.scss", "dist/css/app1.css")
   .scripts([
     "src/javascript/components/fontawesome.min.js",
     "src/javascript/components/fa-brands.min.js",

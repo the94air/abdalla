@@ -81,6 +81,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_gsap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_gsap__);
 
 
+window.onload = function () {
+    document.getElementById('loader').style.opacity = 0;
+    document.getElementById('loader').style.pointerEvents = 'none';
+    document.getElementById('body').style.overflow = 'auto';
+};
+
 document.onmousemove = function (event) {
     var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
     var height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
@@ -96,7 +102,6 @@ document.onmousemove = function (event) {
     });
 };
 
-document.getElementById('show-date').innerHTML = new Date().getFullYear();
 var coded = "MSr4zAHf@6hAHB.IOh";
 var key = "K0D9GpJwh8WF7OqfsxCXy4dNlkSiEgLVavuQ2tcz1eBT5Hn6PUA3mbZMIoRrYj";
 var shift = coded.length;

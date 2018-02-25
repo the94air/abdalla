@@ -14,10 +14,48 @@ body {
     font-size: 1.2em;
     height: 100%;
     margin: 0;
+    overflow: hidden;
 }
 ::selection {
     background: rgb(255, 243, 0);
     color: #000;
+}
+.loader {
+    background: #acb6e5;
+    background: -webkit-linear-gradient(to right, #86fde8, #acb6e5);
+    background: linear-gradient(to right, #86fde8, #acb6e5);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 99999;
+    overflow: hidden;
+    opacity: 1;
+    transition: opacity 300ms ease;
+    &::after {
+        content: "";
+        position: absolute;
+        top: calc(50% - 4.625rem);
+        left: calc(50% - 3.625rem);
+        width: 9.25rem;
+        height: 9.25rem;
+        border-radius: 50%;
+        border-width: .4rem;
+        border: .2rem solid #cce7ff;
+        border-top-color: #1091ff;
+        border-left-color: #1091ff;
+        -webkit-animation: loader .75s linear infinite;
+        animation: loader .75s linear infinite;
+    }
+}
+@keyframes loader {
+    0% {
+        transform:rotate(0deg)
+    }
+    to {
+        transform:rotate(1turn)
+    }
 }
 .background {
     background-image: url('../images/background.jpg');
@@ -34,7 +72,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
 }
 h1 {
-    font-size: 5.6em;
+    font-size: 3.6em;
     margin: 0;
     @include tablet {
         font-size: 4em;
@@ -197,10 +235,7 @@ header {
 }
 main {
     display: flex;
-    flex-direction: column;
-    @include desktop {
-        flex-direction: row;
-    }
+    flex-wrap: wrap;
     p {
         font-size: 1.2em;
     }
@@ -213,6 +248,14 @@ main {
             margin: 0;
             font-size: 1.83em;
         }
+    }
+    @include desktop {
+        flex-basis: 55%;
+    }
+}
+aside {
+    @include desktop {
+        flex-basis: 45%;
     }
 }
 .contact {
@@ -246,6 +289,7 @@ main {
         border-radius: 0.1em;
         color: #fff;
         transition: box-shadow 100ms ease;
+        outline: none;
         &:focus {
             box-shadow: 0px 0px 6px #000 inset;
         }
