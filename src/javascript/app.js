@@ -1,9 +1,13 @@
 import { TweenLite } from "gsap";
+import { addClass } from "./components/functions";
+
+let body = document.getElementById('body');
+body.style.top = -(document.documentElement.scrollTop) + 'px';
 
 window.onload = function () {
     document.getElementById('loader').style.opacity = 0;
     document.getElementById('loader').style.pointerEvents = 'none';
-    document.getElementById('body').style.overflow = 'auto';
+    addClass(body, 'complete');
 };
 
 document.onmousemove = function(event) {

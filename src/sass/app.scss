@@ -14,11 +14,16 @@ body {
     font-size: 1.2em;
     height: 100%;
     margin: 0;
-    overflow: hidden;
+    position: fixed;
+    overflow-y:scroll;
 }
 ::selection {
     background: rgb(255, 243, 0);
     color: #000;
+}
+.complete {
+    position: static;
+    overflow-y:auto;
 }
 .loader {
     background: #acb6e5;
