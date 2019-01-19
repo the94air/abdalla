@@ -1,0 +1,17 @@
+.menu {
+    @apply flex flex-row items-center pl-0 mb-0 list-reset;
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    > li {
+        @apply ml-4;
+        &:nth-child(1) {
+            @apply ml-0;
+        }
+        > a {
+            @apply text-2xl;
+            @screen md {
+                @apply p-3;
+            }
+        }
+    }
+}

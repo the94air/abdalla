@@ -1,0 +1,17 @@
+.links {
+    @apply flex flex-row items-center justify-end pl-0 mb-0 list-reset;
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    > li {
+        @apply ml-5;
+        &:nth-child(1) {
+            @apply ml-0;
+        }
+        > a {
+            color: #ffbc42;
+            &:hover, &:focus {
+                @apply text-white;
+            }
+        }
+    }
+}

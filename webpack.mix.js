@@ -1,4 +1,5 @@
 let mix = require('laravel-mix');
+let tailwindcss = require('tailwindcss');
 
 /*
  |--------------------------------------------------------------------------
@@ -11,15 +12,19 @@ let mix = require('laravel-mix');
  |
  */
 
-mix.setPublicPath("dist")
-	.setResourceRoot("https://abdalla.js.org/dist/")
-	// .setResourceRoot("http://abdalla.oo/dist/")
-  .js("src/javascript/app.js", "dist/javascript/app2.js")
-  .sass("src/sass/app.scss", "dist/css/app2.css")
-  .scripts([
-    "src/javascript/components/fontawesome.min.js",
-    "src/javascript/components/fa-brands.min.js",
-  ], "dist/javascript/icons.js");
+mix.setPublicPath('public')
+    .setResourceRoot('http://abdalla.test')
+    .js('src/javascript/app.js', 'public/javascript')
+    .sass('src/sass/app.scss', 'public/css')
+    .copyDirectory('src/images', 'public/images')
+    .options({
+        processCssUrls: false,
+        postCss: [ tailwindcss('./tailwind.js') ],
+    });
+
+if (mix.inProduction()) {
+    mix.version();
+}
 
 // Full API
 // mix.js(src, output);
