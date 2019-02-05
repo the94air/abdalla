@@ -220,21 +220,8 @@ module.exports = {
       'Georgia',
       'serif',
     ],
-    'cutive-mono': [
-      'Cutive Mono',
-      'Constantia',
-      'Lucida Bright',
-      'Lucidabright',
-      'Lucida Serif',
-      'Lucida',
-      'DejaVu Serif',
-      'Bitstream Vera Serif',
-      'Liberation Serif',
-      'Georgia',
-      'serif',
-    ],
-    'kalam': [
-      'Kalam',
+    'clinton': [
+      'Clinton',
       'Constantia',
       'Lucida Bright',
       'Lucidabright',
@@ -702,6 +689,8 @@ module.exports = {
     '20': '5rem',
     '24': '6rem',
     '32': '8rem',
+    '48': '12rem',
+    '64': '16rem',
   },
 
 

@@ -1,16 +1,57 @@
 .menu {
-    @apply flex flex-row items-center pl-0 mb-0 list-reset;
+    @apply flex flex-row flex-wrap items-center pl-0 mb-0 list-reset;
     padding-top: 0.3125rem;
     padding-bottom: 0.3125rem;
     > li {
-        @apply ml-4;
-        &:nth-child(1) {
-            @apply ml-0;
+        @apply text-center;
+        @screen md {
+            @apply ml-4 text-left;
+            &:nth-child(1) {
+                @apply ml-0;
+            }
         }
         > a {
-            @apply text-2xl;
+            @apply text-4xl pointer-events-auto;
             @screen md {
-                @apply p-3;
+                @apply px-3 pt-4 pb-2;
+            }
+            .twitter-color {
+                color: #1da1f2;
+            }
+            .globe-americas-color {
+                color: #0073d9;
+            }
+            .github-color {
+                color: #000000;
+            }
+            .stack-overflow-color {
+                color: #f48024;
+            }
+            .npm-color {
+                color: #cb3837;
+            }
+            .discord-color {
+                color: #7289da;
+            }
+            &:hover, &:focus {
+                .twitter-color {
+                    color: lighten(#1da1f2, 5%);
+                }
+                .globe-americas-color {
+                    color: lighten(#0073d9, 5%);
+                }
+                .github-color {
+                    color: lighten(#000000, 5%);
+                }
+                .stack-overflow-color {
+                    color: lighten(#f48024, 5%);
+                }
+                .npm-color {
+                    color: lighten(#cb3837, 5%);
+                }
+                .discord-color {
+                    color: lighten(#7289da, 5%);
+                }
             }
         }
     }

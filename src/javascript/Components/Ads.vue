@@ -1,40 +1,25 @@
 <template>
     <aside class="stars">
         <parallax-container>
-            <div class="container py-20">
+            <div class="container py-16 md:py-32">
                 <div class="flex">
-                    <div class="w-full md:w-4/5 ml-auto">
-                        <parallax-element :parallaxStrength="-5" :type="'translation'">
-                            <h2>Side projects</h2>
-                        </parallax-element>
+                    <div class="w-full md:w-4/5 mr-auto">
+                        <h2>Side Projects</h2>
                         <div class="flex flex-wrap items-center -mx-16">
-                            <div class="w-full md:w-1/2 px-16 mb-8 md:mb-0">
-                                <a target="_blank" href="https://codolog.com">
-                                    <parallax-element :parallaxStrength="-5" :type="'translation'">
+                            <div v-for="(project, index) in projects" :key="index" class="w-full md:w-1/2 px-16" :class="[ projects.length == index + 1 ? '' : 'mb-8 md:mb-0' ]">
+                                <a target="_blank" :href="project.link">
+                                    <parallax-element :parallaxStrength="-5 * (index + 1)" :type="'translation'">
                                         <div class="star">
                                             <div class="star-img">
-                                                <img src="images/codolog.png" alt="Codolog" title="Codolog">
+                                                <img :src="project.image" :alt="project.name" :title="project.name">
                                             </div>
                                             <div class="star-content">
-                                                <h3>Codolog</h3>
-                                                <p class="sub-title">Your notes, simplified.</p>
-                                                <p>A cloud-based app for saving notes, thoughts, and ideas. Build especially for developers.</p>
+                                                <h3>{{ project.name }}</h3>
+                                                <p class="sub-title">{{ project.sub }}</p>
+                                                <p>{{ project.description }}</p>
                                             </div>
-                                        </div>
-                                    </parallax-element>
-                                </a>
-                            </div>
-                            <div class="w-full md:w-1/2 px-16">
-                                <a target="_blank" href="https://larastrator.js.org/">
-                                    <parallax-element :parallaxStrength="-10" :type="'translation'">
-                                        <div class="star">
-                                            <div class="star-img">
-                                                <img src="images/larastrator.png" alt="Larastrator" title="Larastrator">
-                                            </div>
-                                            <div class="star-content">
-                                                <h3>Larastrator</h3>
-                                                <p class="sub-title">Build a nice looking admin panel in a blink.</p>
-                                                <p>A Lightweight admin panel components with Tailwindcss and Vue.</p>
+                                            <div class="star-icon">
+                                                <Fa :icon="[ 'fas', 'external-link-square-alt' ]" />
                                             </div>
                                         </div>
                                     </parallax-element>
@@ -47,3 +32,28 @@
         </parallax-container>
     </aside>
 </template>
+
+<script>
+    export default {
+        data() {
+            return {
+                projects: [
+                    {
+                        name: 'Codolog',
+                        sub: 'Your notes, simplified.',
+                        description: 'A cloud-based app for saving notes, thoughts, and ideas. Build especially for developers.',
+                        link: 'https://codolog.com',
+                        image: 'images/codolog.png',
+                    },
+                    {
+                        name: 'Larastrator',
+                        sub: 'Build a nice looking admin panel in a blink.',
+                        description: 'A Lightweight admin panel components with Tailwindcss and Vue.',
+                        link: 'https://codolog.com',
+                        image: 'images/larastrator.png',
+                    },
+                ]
+            }
+        }
+    }
+</script>

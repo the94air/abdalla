@@ -4,15 +4,16 @@ html {
 }
 
 body {
-    @apply font-kalam;
+    @apply font-clinton font-semibold;
+    font-style: normal;
     background: config('colors.white');
     width: 100%;
     height: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    @apply font-cutive-mono;
-    font-weight: 200;
+    @apply font-clinton font-extrabold;
+    font-style: normal;
 }
 
 ::selection {

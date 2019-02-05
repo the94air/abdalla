@@ -12,19 +12,18 @@ let tailwindcss = require('tailwindcss');
  |
  */
 
-mix.setPublicPath('public')
+mix
+    // .setPublicPath('public')
     .setResourceRoot('http://abdalla.test')
-    .js('src/javascript/app.js', 'public/javascript')
-    .sass('src/sass/app.scss', 'public/css')
-    .copyDirectory('src/images', 'public/images')
+    .js('src/javascript/app.js', 'docs/javascript')
+    .sass('src/sass/app.scss', 'docs/css')
+    .sass('src/sass/fonts.scss', 'docs/css')
+    .copyDirectory('src/images', 'docs/images')
+    .copyDirectory('src/fonts', 'docs/fonts')
     .options({
         processCssUrls: false,
         postCss: [ tailwindcss('./tailwind.js') ],
     });
-
-if (mix.inProduction()) {
-    mix.version();
-}
 
 // Full API
 // mix.js(src, output);

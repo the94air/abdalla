@@ -1,8 +1,7 @@
 <template>
     <div>
         <Header />
-        <About />
-        <Languages />
+        <Intro />
         <Ads />
         <Footer />
     </div>
@@ -10,12 +9,11 @@
 
 <script>
     import Header from '../Components/Header';
-    import About from '../Components/About';
-    import Languages from '../Components/Languages';
+    import Intro from '../Components/Intro';
     import Ads from '../Components/Ads';
     import Footer from '../Components/Footer';
 
     export default {
-        components: { Header, About, Languages, Ads, Footer },
+        components: { Header, Intro, Ads, Footer },
     }
 </script>

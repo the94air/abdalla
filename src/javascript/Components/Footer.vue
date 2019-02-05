@@ -3,7 +3,7 @@
         <div class="footer">
             <div class="container">
                 <div class="flex flex-wrap">
-                    <div class="w-full text-center md:w-1/2 md:text-left mb-6 md:mb-0">
+                    <div class="w-full text-center md:w-1/2 md:text-left mb-10 md:mb-0">
                         &copy; Codolog {{ date }}
                     </div>
                     <div class="w-full text-center md:w-1/2 md:text-right">

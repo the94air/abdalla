@@ -1,31 +1,38 @@
 .header {
-    @apply py-16 relative overflow-x-hidden;
-    @screen md {
-        @apply py-0 overflow-hidden;
-    }
+    @apply relative;
+    border-top: 6px solid #8F2D56;
     .background {
-        @apply hidden absolute pin;
-        z-index: -1;
+        @apply hidden;
         @screen md {
             @apply block;
         }
         .shape-1 {
-            width: 250px;
-            height: 225px;
+            @apply ml-auto;
+            width: 470px;
+            height: 470px;
             background-image: linear-gradient( 135deg, lighten(#D81159, 10%) 10%, #D81159 100%);
+            transform: rotate(-10deg);
         }
     }
-    h1 {
-        font-size: 3.5rem;
+    .forground {
         @screen md {
-            font-size: 5rem;
+            @apply absolute w-full pointer-events-none;
+            top: 0;
+            z-index: 3;
         }
-    }
-    .sub-title {
-        @apply inline-block font-cutive-mono text-black text-2xl py-2 px-4 mb-6;
-        background-image: linear-gradient( 135deg, lighten(#FFBC42, 10%) 10%, #FFBC42 100%);
-        &::selection {
-            @apply bg-orange-lighter;
+        h1 {
+            @apply mb-4 leading-tight;
+            font-size: 3.5rem;
+            @screen md {
+                font-size: 5rem;
+            }
+        }
+        .sub-title {
+            @apply inline-block text-black text-2xl leading-normal py-2 pt-3 px-4 mb-6;
+            background-image: linear-gradient( 135deg, lighten(#FFBC42, 10%) 10%, #FFBC42 100%);
+            &::selection {
+                @apply bg-orange-dark;
+            }
         }
     }
 }

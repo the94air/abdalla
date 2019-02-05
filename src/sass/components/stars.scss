@@ -1,11 +1,11 @@
 .stars {
-    background-image: linear-gradient( 135deg, #ffffff 10%, #fff1b9 100%);
+    background-image: linear-gradient(145deg, #ffffff 10%, #fff1b9 100%);
     h2 {
-        @apply inline-block text-5xl mb-8;
+        @apply inline-block text-5xl leading-tight mb-8 pb-4;
         border-bottom: 2px solid #d81159;
     }
     .star {
-        @apply flex flex-col text-black py-12 px-5;
+        @apply relative flex flex-col text-black py-12 px-5;
         background-image: linear-gradient(135deg, #ffce75 10%, #ffbc42 100%);
         box-shadow: 0 15px 30px 0px rgba(0, 0, 0, 0.1);
         .star-img {
@@ -18,13 +18,13 @@
         .star-content {
             @apply text-center;
             h3 {
-                @apply text-3xl mb-3 font-kalam;
+                @apply text-3xl mb-3 font-clinton font-semibold;
             }
             .sub-title {
-                @apply text-xl mb-3;
+                @apply text-xl mb-3 leading-normal;
             }
             p {
-                @apply text-lg;
+                @apply text-lg leading-normal;
             }
         }
         &:hover {
@@ -33,6 +33,12 @@
                     transform: rotate(180deg);
                 }
             }
+        }
+        .star-icon {
+            @apply absolute text-3xl;
+            top: 5px;
+            right: 7px;
+            color: #e09b1e;
         }
     }
 }

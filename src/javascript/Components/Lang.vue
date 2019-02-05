@@ -1,9 +1,8 @@
 <template>
-    <div class="w-1/3 px-2">
+    <div class="w-1/3 md:w-1/6 px-2">
         <parallax-element :parallaxStrength="-50" :type="'translation'">
             <div class="lang">
-                <Fa :icon="[ 'fab', lang.icon ]" />
-                <p v-text="lang.name"></p>
+                <Fa :icon="[ 'fab', lang.icon ]" :title="lang.name" />
             </div>
             <svg width="0" height="0">
                 <linearGradient :id="'lgrad' + lang.id" x1="100%" y1="100%" x2="0%" y2="0%" gradientTransform="rotate(45)">
