@@ -49,7 +49,7 @@
                         name: 'Larastrator',
                         sub: 'Build a nice looking admin panel in a blink.',
                         description: 'A Lightweight admin panel components with Tailwindcss and Vue.',
-                        link: 'https://codolog.com',
+                        link: 'https://larastrator.js.org',
                         image: 'images/larastrator.png',
                     },
                 ]
