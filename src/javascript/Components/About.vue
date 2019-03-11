@@ -6,7 +6,7 @@
                     <div class="flex w-full">
                         <div class="w-full">
                             <h2>About</h2>
-                            <p class="about-text">I am a senior developer. Five years ago, I wrote my first line of code. In my career, I focus on designing, coding, and deploying web applications. Most of the time, I build PHP Websites and admin panels with Laravel Framework with the help of CSS and JavaScript preprocessors like Webpack. My favorite JavaScript Framework is Vue. I am used to working with APIs whenever it needed because it makes our life more easier and more connected.</p>
+                            <p class="about-text">I am a senior developer. I wrote my first line of code 5 years ago when I was at college. Currently, I build Single Page Applications, PHP Websites, and Admin panels with the help of Laravel Framework and CSS/JavaScript bundlers like Webpack. My favorite JavaScript Framework is Vue. I love the Internet and anything opensource.</p>
                         </div>
                     </div>
                 </div>
