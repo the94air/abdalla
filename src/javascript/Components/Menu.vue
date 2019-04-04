@@ -5,11 +5,11 @@
                 <Fa class="fa-fw twitter-color" :icon="[ 'fab', 'twitter' ]" />
             </a>
         </li>
-        <li class="w-1/3 md:w-auto mb-4 md:mb-0">
+<!--         <li class="w-1/3 md:w-auto mb-4 md:mb-0">
             <a target="_blank" href="https://blog.codolog.com" title="Blog">
                 <Fa class="fa-fw globe-americas-color" :icon="[ 'fas', 'globe-americas' ]" />
             </a>
-        </li>
+        </li> -->
         <li class="w-1/3 md:w-auto mb-4 md:mb-0">
             <a target="_blank" href="https://github.com/the94air" title="GitHub">
                 <Fa class="fa-fw github-color" :icon="[ 'fab', 'github' ]" />

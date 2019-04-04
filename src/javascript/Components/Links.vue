@@ -1,11 +1,11 @@
 <template>
     <ul class="links">
-        <li>
+<!--         <li>
             <a target="_blank" href="https://blog.codolog.com">
                 <Fa :icon="[ 'fas', 'globe-americas' ]" />
                 <span>Blog</span>
             </a>
-        </li>
+        </li> -->
         <li>
             <a target="_blank" href="https://docs.codolog.com">
                 <Fa :icon="[ 'fas', 'book' ]" />

@@ -45,13 +45,13 @@
                         link: 'https://codolog.com',
                         image: 'images/codolog.png',
                     },
-                    {
-                        name: 'Empathy',
-                        sub: 'Build A Nice Looking Admin Panel In A Blink.',
-                        description: 'A Lightweight Admin Panel Components With Tailwindcss & Vue.',
-                        link: 'https://empathy.js.org',
-                        image: 'images/empathy.png',
-                    },
+                    // {
+                    //     name: 'Empathy',
+                    //     sub: 'Build A Nice Looking Admin Panel In A Blink.',
+                    //     description: 'A Lightweight Admin Panel Components With Tailwindcss & Vue.',
+                    //     link: 'https://empathy.js.org',
+                    //     image: 'images/empathy.png',
+                    // },
                     {
                         name: 'Form',
                         sub: 'Single Class CSS Framework For Web Forms.',
@@ -59,13 +59,13 @@
                         link: 'https://form.js.org',
                         image: 'images/form.png',
                     },
-                    {
-                        name: 'Fun',
-                        sub: 'Make Checkboxes & Radios With CSS Only Without Images.',
-                        description: 'A Custom Checkboxes & Radios CSS Generator.',
-                        link: 'https://fun.js.org',
-                        image: 'images/fun.png',
-                    },
+                    // {
+                    //     name: 'Fun',
+                    //     sub: 'Make Checkboxes & Radios With CSS Only Without Images.',
+                    //     description: 'A Custom Checkboxes & Radios CSS Generator.',
+                    //     link: 'https://fun.js.org',
+                    //     image: 'images/fun.png',
+                    // },
                 ]
             }
         }
