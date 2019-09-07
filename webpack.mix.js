@@ -1,28 +1,31 @@
 let mix = require('laravel-mix');
 let tailwindcss = require('tailwindcss');
 
-/*
- |--------------------------------------------------------------------------
- | Mix Asset Management
- |--------------------------------------------------------------------------
- |
- | Mix provides a clean, fluent API for defining some Webpack build steps
- | for your Laravel application. By default, we are compiling the Sass
- | file for your application, as well as bundling up your JS files.
- |
- */
+let glob = require('glob-all');
+require('laravel-mix-purgecss');
 
 mix
-    // .setPublicPath('public')
+    .setPublicPath('docs')
     .setResourceRoot('http://abdalla.test')
     .js('src/javascript/app.js', 'docs/javascript')
     .sass('src/sass/app.scss', 'docs/css')
     .sass('src/sass/fonts.scss', 'docs/css')
     .copyDirectory('src/images', 'docs/images')
     .copyDirectory('src/fonts', 'docs/fonts')
+    .copyDirectory('src/favicons', 'docs')
     .options({
         processCssUrls: false,
-        postCss: [ tailwindcss('./tailwind.js') ],
+        postCss: [ tailwindcss('./tailwind.config.js') ],
+    })
+    .purgeCss({
+        folders: ['docs', 'src'],
+        extensions: ['html, vue', 'js'],
+        paths: () => glob.sync([
+            path.join(__dirname, 'src/**/*.vue'),
+            path.join(__dirname, 'docs/**/*.html'),
+            path.join(__dirname, 'src/**/*.js'),
+        ]),
+        extractorPattern: '/[A-Za-z0-9-_:/]+/g'
     });
 
 // Full API

@@ -1,9 +1,5 @@
-@import './components/normalize';
-@import './components/header';
-@import './components/menu';
-@import './components/about';
-@import './components/intro';
-@import './components/langs';
-@import './components/stars';
-@import './components/footer';
-@import './components/links';
+@import 'components/base';
+
+/* purgecss start ignore */
+@import 'components/tooltips';
+/* purgecss end ignore */

@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import App from './App/App';
+import App from './App';
 
 require('./bootstrap');
 
