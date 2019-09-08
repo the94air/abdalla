@@ -6,32 +6,34 @@
 			</div>
 			<div class="container">
 				<div class="flex flex-wrap flex-col-reverse md:flex-row items-center -mx-3">
-					<div class="w-full md:w-1/2 px-3 text-center md:text-left">
-						<h1 class="md:text-7xl">Abdalla Arbab</h1>
-						<p class="inline-block text-lg perfect-yellow perfect-yellow-border px-4 py-2 shadow-lg rounded-sm mb-3">A Full-Stack Developer, Websites Designer & Admin Panels Specialist</p>
+					<div class="w-full md:w-1/2 px-3 text-center md:text-left" itemscope itemtype="http://schema.org/Person">
+						<h1 class="md:text-7xl" data-aos="fade-right" data-aos-duration="250" itemprop="name">Abdalla Arbab</h1>
+						<div>
+							<p class="inline-block text-lg perfect-yellow perfect-yellow-border px-4 py-2 shadow-lg rounded-sm mb-3" data-aos="flip-down" data-aos-delay="200" data-aos-duration="250" itemprop="jobTitle">A Full-Stack Developer, Websites Designer & Admin Panels Specialist</p>
+						</div>
 					    <ul class="header-menu">
 					        <li class="w-1/3 md:w-auto mb-4 md:mb-0">
-					            <a target="_blank" href="https://twitter.com/abdalla__arbab" v-tooltip.bottom="'Twitter'">
+					            <a data-aos="zoom-in" data-aos-duration="250" data-aos-delay="350" target="_blank" itemprop="url" href="https://twitter.com/abdalla__arbab" v-tooltip.bottom="'Twitter'">
 					                <Fa class="fa-fw twitter-color" :icon="[ 'fab', 'twitter' ]" />
 					            </a>
 					        </li>
 					        <li class="w-1/3 md:w-auto mb-4 md:mb-0">
-					            <a target="_blank" href="https://github.com/the94air" v-tooltip.bottom="'GitHub'">
+					            <a data-aos="zoom-in" data-aos-duration="250" data-aos-delay="450" target="_blank" itemprop="url" href="https://github.com/the94air" v-tooltip.bottom="'GitHub'">
 					                <Fa class="fa-fw github-color" :icon="[ 'fab', 'github' ]" />
 					            </a>
 					        </li>
 					        <li class="w-1/3 md:w-auto mb-4 md:mb-0">
-					            <a target="_blank" href="https://stackoverflow.com/users/7396433" v-tooltip.bottom="'Stack Overflow'">
+					            <a data-aos="zoom-in" data-aos-duration="250" data-aos-delay="550" target="_blank" itemprop="url" href="https://stackoverflow.com/users/7396433" v-tooltip.bottom="'Stack Overflow'">
 					                <Fa class="fa-fw stack-overflow-color" :icon="[ 'fab', 'stack-overflow' ]" />
 					            </a>
 					        </li>
 					        <li class="w-1/3 md:w-auto">
-					            <a target="_blank" href="https://www.npmjs.com/~the94air" v-tooltip.bottom="'NPM'">
+					            <a data-aos="zoom-in" data-aos-duration="250" data-aos-delay="650" target="_blank" itemprop="url" href="https://www.npmjs.com/~the94air" v-tooltip.bottom="'NPM'">
 					                <Fa class="fa-fw npm-color" :icon="[ 'fab', 'npm' ]" />
 					            </a>
 					        </li>
 					        <li class="w-1/3 md:w-auto">
-					            <a target="_blank" href="https://discord.gg/rXhpxgC" v-tooltip.bottom="'Discord'">
+					            <a data-aos="zoom-in" data-aos-duration="250" data-aos-delay="750" target="_blank" href="https://discord.gg/rXhpxgC" v-tooltip.bottom="'Discord'">
 					                <Fa class="fa-fw discord-color" :icon="[ 'fab', 'discord' ]" />
 					            </a>
 					        </li>

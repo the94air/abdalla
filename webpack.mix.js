@@ -1,8 +1,7 @@
 let mix = require('laravel-mix');
 let tailwindcss = require('tailwindcss');
 
-let glob = require('glob-all');
-require('laravel-mix-purgecss');
+let purgecss = require('@fullhuman/postcss-purgecss');
 
 mix
     .setPublicPath('docs')
@@ -15,17 +14,19 @@ mix
     .copyDirectory('src/favicons', 'docs')
     .options({
         processCssUrls: false,
-        postCss: [ tailwindcss('./tailwind.config.js') ],
-    })
-    .purgeCss({
-        folders: ['docs', 'src'],
-        extensions: ['html, vue', 'js'],
-        paths: () => glob.sync([
-            path.join(__dirname, 'src/**/*.vue'),
-            path.join(__dirname, 'docs/**/*.html'),
-            path.join(__dirname, 'src/**/*.js'),
-        ]),
-        extractorPattern: '/[A-Za-z0-9-_:/]+/g'
+        postCss: [ 
+            tailwindcss('./tailwind.config.js'),
+            purgecss({
+                content: [
+                    './docs/**/*.html',
+                    './src/**/*.vue',
+                ],
+                css: [
+                    'docs/css/app.css'
+                ],
+                defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
+            })
+        ],
     });
 
 // Full API

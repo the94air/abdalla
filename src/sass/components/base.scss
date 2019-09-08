@@ -210,11 +210,17 @@ hr {
         background-color: rgb(202, 255, 253);
         color: black;
         border-color: #246562;
+        &:hover, &:focus {
+            background-color: lighten(rgb(202, 255, 253), 5%);
+        }
     }
     .select {
         @apply font-bold text-white pl-3 pr-4;
         background-color: #e14761;
         border-color: #fab155;
+        &:hover, &:focus {
+            background-color: #e14761;
+        }
         span {
             @apply inline-block text-black rounded-full w-6 h-6 mr-2;
             background: rgba(254, 196, 84, 0.89);
@@ -224,6 +230,10 @@ hr {
 
 .project-box {
     background-color: rgb(202, 255, 253);
+    transition: background ease 150ms;
+    &:hover, &:focus {
+        background-color: lighten(rgb(202, 255, 253), 3%);
+    }
 }
 
 .footer-menu {
