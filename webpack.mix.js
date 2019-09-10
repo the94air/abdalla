@@ -1,28 +1,38 @@
 let mix = require('laravel-mix');
 let tailwindcss = require('tailwindcss');
 
-/*
- |--------------------------------------------------------------------------
- | Mix Asset Management
- |--------------------------------------------------------------------------
- |
- | Mix provides a clean, fluent API for defining some Webpack build steps
- | for your Laravel application. By default, we are compiling the Sass
- | file for your application, as well as bundling up your JS files.
- |
- */
+let purgecss = require('@fullhuman/postcss-purgecss');
 
 mix
-    // .setPublicPath('public')
+    .setPublicPath('docs')
     .setResourceRoot('http://abdalla.test')
     .js('src/javascript/app.js', 'docs/javascript')
     .sass('src/sass/app.scss', 'docs/css')
     .sass('src/sass/fonts.scss', 'docs/css')
     .copyDirectory('src/images', 'docs/images')
     .copyDirectory('src/fonts', 'docs/fonts')
+    .copyDirectory('src/favicons', 'docs')
     .options({
         processCssUrls: false,
-        postCss: [ tailwindcss('./tailwind.js') ],
+        cssNano: {
+            discardComments: {
+                removeAll: false,
+            },
+        },
+        postCss: [ 
+            tailwindcss('./tailwind.config.js'),
+            purgecss({
+                content: [
+                    './docs/**/*.html',
+                    './src/**/*.vue',
+                ],
+                css: [
+                    'docs/css/app.css'
+                ],
+                whitelistPatterns: [/aos/, /tooltip/],
+                defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],
+            })
+        ],
     });
 
 // Full API
