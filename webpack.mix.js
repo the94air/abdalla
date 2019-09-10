@@ -14,6 +14,11 @@ mix
     .copyDirectory('src/favicons', 'docs')
     .options({
         processCssUrls: false,
+        cssNano: {
+            discardComments: {
+                removeAll: false,
+            },
+        },
         postCss: [ 
             tailwindcss('./tailwind.config.js'),
             purgecss({
@@ -24,7 +29,8 @@ mix
                 css: [
                     'docs/css/app.css'
                 ],
-                defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
+                whitelistPatterns: [/aos/, /tooltip/],
+                defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],
             })
         ],
     });

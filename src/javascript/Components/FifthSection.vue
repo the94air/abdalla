@@ -41,7 +41,7 @@
                         name: 'Codolog',
                         sub: 'Your Notes, Simplified',
                         description: 'A Cloud-based App For Notes, Thoughts, & Ideas. Build Especially For Developers',
-                        link: 'https://codolog.com',
+                        link: 'https://codolog.herokuapp.com',
                         image: 'images/codolog.png',
                     },
                     {
