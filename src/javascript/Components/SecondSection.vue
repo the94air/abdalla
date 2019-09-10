@@ -54,19 +54,19 @@
 					{
 						id: 1,
 						text: 'Content',
-						description: 'First, I collect all the information needed to make the content like Text, Photos, Videos, Sketchapp files, Photoshop files ...etc. And then I make a list of all the required features on the website. After that, the client fills a small review to show us what exact kind of website he needs.',
+						description: 'First, I collect all the information needed to make the website content like Text, Photos, Videos, Sketchapp files, Photoshop files ...etc. And then I make a list of all the required features of the website. After that, the client receives a small review to answer, that helps me know what kind of website he needs.',
 					 	quote: 'Content is the most important part of the process. After all, that\'s why we make websites.'
 					},
 					{
 						id: 2,
 						text: 'Architecture',
-						description: 'After that, I process all the information to decide what technologies can work well with the client needs. After that, I start making the system architecture includes the number of pages, Site map, menus structure, Database fields, Emails, and SEO.',
+						description: 'I process all the information to decide what web technologies can work perfectly with the client needs. Then I start making the system architecture. The system architecture shows up the pages diagram, the site map, menus structure, database fields, emails diagram, and SEO diagram.',
 						quote: 'Before you succeed at something, you need a plan.'
 					},
 					{
 						id: 3,
 						text: 'Design',
-						description: 'When all the information is ready, I start making a full-featured design of all the website interfaces based on the client requirements and modify the new design order by the client request.',
+						description: 'When all the information is ready, I start making a full-featured design of the website interfaces based on the client requirements and then I modify the design order by the client request.',
 						quote: 'Making a website is like building a house. You need a map before you start.'
 					},
 					{
@@ -78,26 +78,26 @@
 					{
 						id: 5,
 						text: 'Testing',
-						description: 'After building the website from the ground up then comes the testing. In this step, we will test the browser compatibility, UX/UI. Then comes the back-end testing to provide full protection to all the data workflow and to provide a fast and informational user experience.',
+						description: 'After building the website from scratch then comes the testing. In this step, I test the browser compatibility, the user interface, and the user experience of the website. Then comes the back-end testing to guarantee the full protection to all the data workflow and to provide a fast website response.',
 						quote: 'It\'s not a software if not tested.'
 					},
 					{
 						id: 6,
 						text: 'Deployment',
-						description: 'At this point, the website is ready for online publishing. We use automation tools to deploy websites from Source control to the website server and later to publish the website after any code modifications.',
-						quote: 'Zero downtime deployments are a good choice for publishing your site.'
+						description: 'At this point, the website is ready for publishing online. I use automation tools to deploy the website from source control to the website server. Next, I protect the website using file permission and then I set up the SSL/TLS certificate to encrypt the data between the website visitor and the website server.',
+						quote: 'Automated deployment helps to publish faster after adding or modifying your websites.'
 					},
 					{
 						id: 7,
 						text: 'SEO',
-						description: 'And then we put the website to the search engines for everyone to see. This is so important because that is how most people are going to know about your site.',
+						description: 'I add the website to the search engines for everyone to see. This is so important because it is how most people are going to know about your site. I also use "Open Graph" and "Schema.org" to control the visibility of the website information in search engines and social media.',
 						quote: 'Being in the top results of a search engine is your open doors to the world.'
 					},
 					{
 						id: 8,
 						text: 'Maintenance',
-						description: 'Every website should be updated to defend most kinds of security issues and to monitor the server performance to make sure it can handle the amount of your website visitor without any issues.',
-						quote: 'A website is a living thing. It needs updates and maintenance so it doesn\'t die.'
+						description: 'Every website should be updated to defend most kinds of security issues and to monitor the server performance. This also makes sure it can handle the number of your website visitors without any issues.',
+						quote: 'A website is a living thing. It needs updates so it doesn\'t die.'
 					},
 				]
 			}
