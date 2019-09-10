@@ -1,13 +1,13 @@
 <template>
 	<div class="perfect-green py-24 md:py-40 text-white">
 		<div class="container">
-			<div class="w-full lg:w-8/12 lg:mx-auto">
+			<div class="w-full lg:w-10/12 lg:mx-auto">
 				<p class="perfect-yellow-text font-title uppercase text-sm mb-4" data-aos="fade" data-aos-anchor-placement="center-center" data-aos-duration="250">Step by step</p>
 				<div class="mb-16" data-aos="zoom-in-right" data-aos-anchor-placement="center-center" data-aos-delay="250" data-aos-duration="250">
 					<h2 class="inline-block text-2xl md:text-5xl perfect-green-light perfect-green-dark-border pt-4 pb-1 px-6 rounded shadow-lg">How I Make Websites</h2>
 				</div>
 				<div class="flex flex-wrap items-start -mx-3">
-					<div class="w-full md:w-3/12 px-3">
+					<div class="w-full md:w-3/12 px-3 md:mt-10">
 						<ul class="steps-menu w-full mb-10 md:mb-0" data-aos="fade-left" data-aos-duration="150" data-aos-delay="500">
 							<li class="inline-block mr-2 md:block md:mr-0" v-for="button in buttons" :key="'button' + button.id">
 								<button class="border-2 rounded-full shadow-lg focus:outline-none focus:shadow-outline py-2 px-4 mb-5" :class="[ selected == button.id ? 'select' : '' ]" @click="select(button.id)"><span v-if="selected == button.id">{{ button.id }}</span>{{ button.text }}</button>
@@ -38,7 +38,6 @@
 								</div>
 							</div>
 						</transition>
-						
 					</div>
 				</div>
 			</div>
