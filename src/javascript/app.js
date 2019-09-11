@@ -9,7 +9,6 @@ const app = new Vue({
     render: h => h(App),
 	created() {
 		AOS.init({
-			delay: 100,
 			once: true
 		});
 	},

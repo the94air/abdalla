@@ -21,17 +21,17 @@ mix
         },
         postCss: [ 
             tailwindcss('./tailwind.config.js'),
-            purgecss({
-                content: [
-                    './docs/**/*.html',
-                    './src/**/*.vue',
-                ],
-                css: [
-                    'docs/css/app.css'
-                ],
-                whitelistPatterns: [/aos/, /tooltip/],
-                defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],
-            })
+            // purgecss({
+            //     content: [
+            //         './docs/**/*.html',
+            //         './src/**/*.vue',
+            //     ],
+            //     css: [
+            //         'docs/css/app.css'
+            //     ],
+            //     whitelistPatterns: [/aos/, /tooltip/],
+            //     defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],
+            // })
         ],
     });
 

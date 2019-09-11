@@ -7,6 +7,7 @@
 			<ThirdSection />
 			<FourthSection />
 			<FifthSection />
+			<SixthSection />
 		</main>
 		<Footer />
 	</div>
@@ -20,8 +21,9 @@
 	import ThirdSection from './Components/ThirdSection';
 	import FourthSection from './Components/FourthSection';
 	import FifthSection from './Components/FifthSection';
+	import SixthSection from './Components/SixthSection';
 
 	export default {
-		components: { Header, Footer, FirstSection, SecondSection, ThirdSection, FourthSection, FifthSection },
+		components: { Header, Footer, FirstSection, SecondSection, ThirdSection, FourthSection, FifthSection, SixthSection },
 	}
 </script>

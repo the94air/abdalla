@@ -185,8 +185,36 @@ hr {
     }
 }
 
+.twitter-button {
+    background: #1da1f2;
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    &:hover, &:focus {
+        background: darken(#1da1f2, 5%);
+    }
+}
+.discord-button {
+    background: #6478bc;
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    &:hover, &:focus {
+        background: darken(#6478bc, 5%);
+    }
+}
+
+.discord-id small {
+    @apply text-gray-300 rounded;
+    background: #580023;
+    padding: 0.3rem 0.75rem;
+}
+
 .bg-img-red-dark {
     background-image: url('/images/dark-red-bg.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-img-red-dark-2 {
+    background-image: url('/images/dark-red-bg-2.svg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

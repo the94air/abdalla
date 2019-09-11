@@ -3,8 +3,8 @@
 		<div class="perfect-green py-24 md:py-40 text-white">
 			<div class="container">
 				<div class="w-full lg:w-8/12 lg:mx-auto">
-					<p class="perfect-yellow-text font-title uppercase text-sm mb-4" data-aos="fade" data-aos-anchor-placement="center-center" data-aos-duration="250">Open source and personal tools</p>
-					<div class="mb-16" data-aos="zoom-in-right" data-aos-anchor-placement="center-center" data-aos-delay="250" data-aos-duration="250">
+					<p class="perfect-yellow-text font-title uppercase text-sm mb-4" data-aos="fade" data-aos-duration="250">Open source and personal tools</p>
+					<div class="mb-16" data-aos="zoom-in-right" data-aos-delay="250" data-aos-duration="250">
 						<h2 class="inline-block text-2xl md:text-5xl perfect-green-light perfect-green-dark-border pt-4 pb-1 px-6 rounded shadow-lg">Projects</h2>
 					</div>
 				</div>
