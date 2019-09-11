@@ -1,5 +1,5 @@
 <template>
-	<div class="perfect-green py-24 md:py-40 text-white">
+	<div class="perfect-green py-24 md:py-40 text-white overflow-hidden">
 		<div class="container">
 			<div class="w-full lg:w-10/12 lg:mx-auto">
 				<p class="perfect-yellow-text font-title uppercase text-sm mb-4" data-aos="fade" data-aos-duration="250">Step by step</p>
