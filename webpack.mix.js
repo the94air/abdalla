@@ -19,21 +19,27 @@ mix
                 removeAll: false,
             },
         },
-        postCss: [ 
+        postCss: [
             tailwindcss('./tailwind.config.js'),
-            // purgecss({
-            //     content: [
-            //         './docs/**/*.html',
-            //         './src/**/*.vue',
-            //     ],
-            //     css: [
-            //         'docs/css/app.css'
-            //     ],
-            //     whitelistPatterns: [/aos/, /tooltip/],
-            //     defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],
-            // })
         ],
     });
+    if (mix.config.production) {
+        mix.options({
+            postCss: [
+                purgecss({
+                    content: [
+                        './docs/**/*.html',
+                        './src/**/*.vue',
+                    ],
+                    css: [
+                        'docs/css/app.css'
+                    ],
+                    whitelistPatterns: [/aos/, /tooltip/],
+                    defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],
+                })
+            ],
+        });
+    }
 
 // Full API
 // mix.js(src, output);
