@@ -1,4 +1,0 @@
-This is a Brave Rewards publisher verification file.
-
-Domain: abdalla.js.org
-Token: f2c59ac1b2b4ba021eac64d85f9d34fceae4877937d645f7e6e0ed71bcbb1cd0
