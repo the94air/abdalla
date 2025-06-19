@@ -1,0 +1,9 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "eslint.format.enable": true,
+  "vue.complete.casing.tags": "autoPascal",
+  "vue.complete.casing.props": "autoCamel",
+  "typescript.tsdk": "node_modules/typescript/lib",
+}

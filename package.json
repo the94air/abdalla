@@ -1,0 +1,32 @@
+{
+  "name": "abdalla-js-org",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "lint": "eslint --ext .ts,.js,.vue .",
+    "lint:fix": "eslint --fix --ext .ts,.js,.vue .",
+    "nuxt:upgrade": "nuxi upgrade --force"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "latest",
+    "@nuxt/eslint-config": "^0.3.13",
+    "@nuxtjs/color-mode": "^3.4.2",
+    "@unocss/eslint-config": "^0.61.6",
+    "@unocss/nuxt": "^0.61.6",
+    "@unocss/reset": "^0.61.6",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "nuxt": "^3.17.4",
+    "prettier": "^3.3.3",
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "@the94air/ui": "^0.0.5"
+  }
+}
