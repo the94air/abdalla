@@ -15,13 +15,18 @@ jobs:
         uses: pnpm/action-setup@v4
         with:
           version: 9
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Use Node
         uses: actions/setup-node@v4
         with:
           node-version: "22"
           cache: 'pnpm'
+      - name: Create .npmrc dynamically
+        run: |
+          echo "@the94air:registry=https://npm.pkg.github.com/" > "$HOME/.npmrc"
+          echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" >> "$HOME/.npmrc"
+          echo "always-auth=true" >> "$HOME/.npmrc"
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Install dependencies
         run: pnpm install
       - name: Build app
