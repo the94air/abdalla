@@ -1,7 +1,6 @@
 name: Deploy to abdalla.js.org
 
 on:
-  workflow_dispatch:
   push:
     branches:
       - main
