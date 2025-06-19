@@ -34,7 +34,7 @@ useSeoMeta({
       <main class="h-full flex items-center justify-center px-2">
         <div class="text-center">
           <h1 class="mb-4 mb-4 max-w-lg text-4xl 3xl:text-6xl md:text-5xl">
-            This website has a new home
+            This website has a new home!
           </h1>
           <div class="mb-2">
             <ButtonLink href="https://abdalla.sd">
