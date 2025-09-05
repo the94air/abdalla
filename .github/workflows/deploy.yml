@@ -25,6 +25,8 @@ jobs:
         with:
           node-version: "22"
           cache: 'pnpm'
+
+      - name: Configure npm registry
         run: pnpm config set '//registry.npmjs.org/:_authToken' "${{ secrets.GITHUB_TOKEN }}"
 
       - name: Install dependencies
