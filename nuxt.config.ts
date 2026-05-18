@@ -1,65 +1,65 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  telemetry: false,
-  debug: false,
-  devtools: { enabled: false },
-  experimental: {
-    headNext: true,
-    typedPages: true,
-  },
+  modules: [
+    '@unocss/nuxt', '@nuxtjs/color-mode',
+  ],
   ssr: true,
-  nitro: {
-    preset: "github_pages",
-  },
-  components: [{ path: "@/components", pathPrefix: false }],
-  css: ["@unocss/reset/tailwind.css"],
-  modules: ["@unocss/nuxt", "@nuxtjs/color-mode"],
+  components: [{ path: '@/components', pathPrefix: false }],
+  devtools: { enabled: false },
   app: {
-    baseURL: "/",
+    baseURL: '/',
     rootAttrs: {
-      class: "h-full",
+      class: 'h-full',
     },
     head: {
       htmlAttrs: {
-        lang: "en",
+        lang: 'en',
       },
       script: [
-        process.env.NODE_ENV === "production"
+        process.env.NODE_ENV === 'production'
           ? {
-              defer: true,
-              src: "https://tics.abdalla.sd/script.js",
-              "data-website-id": "559a58d2-2f34-408a-8179-f700237c3e93",
+              'defer': true,
+              'src': 'https://tics.abdalla.sd/script.js',
+              'data-website-id': '1de16c5b-c058-4cef-a814-d41b0f13bd8e',
             }
           : undefined,
       ],
       link: [
         {
-          rel: "shortcut icon",
-          href: "/favicon.ico?v=4.1",
+          rel: 'shortcut icon',
+          href: '/favicon.ico?v=4.1',
         },
         {
-          rel: "preconnect",
-          href: "https://fonts.googleapis.com",
+          rel: 'preconnect',
+          href: 'https://fonts.googleapis.com',
         },
         {
-          rel: "preconnect",
-          href: "https://fonts.gstatic.com",
-          crossorigin: "",
+          rel: 'preconnect',
+          href: 'https://fonts.gstatic.com',
+          crossorigin: '',
         },
         {
-          rel: "stylesheet",
-          href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap",
+          rel: 'stylesheet',
+          href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap',
         },
         {
-          rel: "stylesheet",
-          href: "https://api.fontshare.com/v2/css?f[]=clash-display@500,600&display=swap",
+          rel: 'stylesheet',
+          href: 'https://api.fontshare.com/v2/css?f[]=clash-display@500,600&display=swap',
         },
       ],
     },
   },
-  typescript: {
-    shim: false,
-    strict: true,
+  css: ['@unocss/reset/tailwind.css'],
+  colorMode: {
+    globalName: '__COLOR_MODE__',
+    storageKey: 'color-mode',
+  },
+  experimental: {
+    typedPages: true,
+  },
+  compatibilityDate: '2024-07-27',
+  nitro: {
+    preset: 'github_pages',
   },
   vite: {
     vue: {
@@ -68,11 +68,10 @@ export default defineNuxtConfig({
       },
     },
   },
-  colorMode: {
-    hid: "color-mode-script",
-    globalName: "__COLOR_MODE__",
-    classSuffix: "",
-    storageKey: "color-mode",
-  },
-  compatibilityDate: "2024-07-27",
-});
+  typescript: {
+    shim: false,
+    strict: true,
+    typeCheck: true,
+  }, telemetry: false,
+  debug: false,
+})

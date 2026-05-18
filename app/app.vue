@@ -1,31 +1,31 @@
 <script setup lang="ts">
-const colorMode = useColorMode();
+const colorMode = useColorMode()
 
 const link = computed(() => {
-  return colorMode.value === "light"
+  return colorMode.value === 'light'
     ? [
         {
-          rel: "shortcut icon",
-          href: "/favicon.ico?v=4.1",
+          rel: 'shortcut icon',
+          href: '/favicon.ico?v=4.1',
         },
       ]
     : [
         {
-          rel: "shortcut icon",
-          href: "/favicon-dark.ico?v=4.1",
+          rel: 'shortcut icon',
+          href: '/favicon-dark.ico?v=4.1',
         },
-      ];
-});
+      ]
+})
 
 useHead({
   link,
-});
+})
 
 useSeoMeta({
-  title: "This website has a new home",
-  ogSiteName: "This website has a new home",
-  ogType: "website",
-});
+  title: 'This website has a new home',
+  ogSiteName: 'This website has a new home',
+  ogType: 'website',
+})
 </script>
 
 <template>
@@ -46,7 +46,8 @@ useSeoMeta({
               <a
                 class="text-gray-400"
                 href="https://abdalla.sd/"
-                >https://abdalla.sd/
+              >
+                https://abdalla.sd/
               </a>
             </p>
           </div>

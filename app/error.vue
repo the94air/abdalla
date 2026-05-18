@@ -1,15 +1,11 @@
 <script setup lang="ts">
-import XButton from "@the94air/ui/lib/components/XButton.vue";
+import type { NuxtError } from 'nuxt/app'
+import XButton from '@the94air/ui/lib/components/XButton.vue'
 
-const { error } = defineProps<{
-  error: {
-    statusCode: number;
-    message: string;
-  };
-}>();
+const { error } = defineProps<{ error: NuxtError }>()
 
 function handelError() {
-  clearError({ redirect: "/" });
+  clearError({ redirect: '/' })
 }
 </script>
 
@@ -21,11 +17,11 @@ function handelError() {
           <div class="text-center">
             <div class="mb-6">
               <h1 class="text-[4rem] lg:text-[8rem] lg:leading-tight">
-                {{ error.statusCode }}
+                {{ error.status }}
               </h1>
               <p class="mb-3 text-lg leading-relaxed">
                 {{
-                  error.statusCode === 404
+                  error.status === 404
                     ? "Huh, I can't find that page, sorry :("
                     : "There was an issue showing you this page, sorry"
                 }}

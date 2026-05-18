@@ -8,25 +8,25 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
+    "typecheck": "nuxt typecheck",
     "lint": "eslint --ext .ts,.js,.vue .",
     "lint:fix": "eslint --fix --ext .ts,.js,.vue .",
     "nuxt:upgrade": "nuxi upgrade --force"
   },
   "dependencies": {
-    "@the94air/ui": "0.0.5"
+    "@the94air/ui": "0.0.5",
+    "vue": "^3.5.34",
+    "nuxt": "^4.4.6",
+    "vue-router": "^5.0.6"
   },
   "devDependencies": {
-    "@nuxt/devtools": "latest",
-    "@nuxt/eslint-config": "^0.3.13",
-    "@nuxtjs/color-mode": "^3.4.2",
-    "@unocss/eslint-config": "^0.61.6",
+    "@nuxt/eslint": "^1.15.2",
+    "@nuxtjs/color-mode": "^4.0.0",
+    "@types/node": "^22.19.19",
     "@unocss/nuxt": "^0.61.6",
     "@unocss/reset": "^0.61.6",
-    "eslint": "^8.57.0",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-prettier": "^5.2.1",
-    "nuxt": "^3.17.4",
-    "prettier": "^3.3.3",
-    "typescript": "^5.5.4"
+    "eslint": "^9.39.4",
+    "typescript": "^5.9.3",
+    "vue-tsc": "^3.2.4"
   }
 }
