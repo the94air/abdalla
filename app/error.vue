@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import type { NuxtError } from 'nuxt/app'
-import XButton from '@the94air/ui/lib/components/XButton.vue'
 
 const { error } = defineProps<{ error: NuxtError }>()
 
@@ -39,7 +38,7 @@ function handelError() {
             </div>
             <div>
               <XButton
-                size="md"
+                size="xl"
                 @click="handelError"
               >
                 Go Home

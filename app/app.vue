@@ -37,9 +37,12 @@ useSeoMeta({
             This website has a new home! 🎉
           </h1>
           <div class="mb-2">
-            <ButtonLink href="https://abdalla.sd">
+            <XButton
+              href="https://abdalla.sd"
+              size="xl"
+            >
               Visit new website
-            </ButtonLink>
+            </XButton>
           </div>
           <div>
             <p class="text-xs">

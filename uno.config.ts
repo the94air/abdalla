@@ -1,4 +1,5 @@
-import { defineConfig, presetUno } from 'unocss'
+import { defineConfig } from 'unocss'
+import presetWind4 from '@unocss/preset-wind4'
 
 const systemFonts = {
   sans: `, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"`,
@@ -11,10 +12,10 @@ export default defineConfig({
     {
       getCSS: ({ theme }) => `
         body {
-          font-family: ${(theme as any).fontFamily.inter};
+          font-family: ${(theme as any).font.inter};
         }
         h1, h2, h3, h4, h5, h6 {
-          font-family: ${(theme as any).fontFamily.clashDisplay};
+          font-family: ${(theme as any).font.clashDisplay};
           font-weight: 600;
         }
         ::selection {
@@ -24,18 +25,24 @@ export default defineConfig({
       `,
     },
   ],
-  presets: [presetUno()],
+  presets: [
+    presetWind4({
+      preflights: {
+        reset: true,
+      },
+    }),
+  ],
   shortcuts: {
     'screen-container':
       'w-full md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl 3xl:max-w-screen-3xl',
     'container': 'mx-auto px-3 screen-container lg:px-10 md:px-5',
   },
   theme: {
-    fontFamily: {
+    font: {
       clashDisplay: `"Clash Display"` + systemFonts.sans,
       inter: `"Inter"` + systemFonts.sans,
     },
-    breakpoints: {
+    breakpoint: {
       'md': '768px',
       'lg': '1024px',
       'xl': '1280px',

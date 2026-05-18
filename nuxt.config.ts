@@ -49,7 +49,9 @@ export default defineNuxtConfig({
       ],
     },
   },
-  css: ['@unocss/reset/tailwind.css'],
+  css: [
+    '@the94air/ui/ui.css',
+  ],
   colorMode: {
     globalName: '__COLOR_MODE__',
     storageKey: 'color-mode',
