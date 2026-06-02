@@ -15,20 +15,20 @@
   },
   "dependencies": {
     "@the94air/ui": "~0.2.1",
-    "vue": "^3.5.34",
-    "nuxt": "^4.4.6",
-    "vue-router": "^5.0.6"
+    "vue": "^3.5.35",
+    "nuxt": "^4.4.7",
+    "vue-router": "^5.0.7"
   },
   "devDependencies": {
     "@nuxt/eslint": "^1.15.2",
     "@nuxtjs/color-mode": "^4.0.0",
     "@types/node": "^22.19.19",
-    "@unocss/nuxt": "^66.6.8",
-    "@unocss/preset-wind4": "^66.6.8",
-    "@unocss/reset": "^66.6.8",
+    "@unocss/nuxt": "^66.7.0",
+    "@unocss/preset-wind4": "^66.7.0",
+    "@unocss/reset": "^66.7.0",
     "eslint": "^9.39.4",
     "typescript": "^5.9.3",
-    "unocss": "^66.6.8",
-    "vue-tsc": "^3.2.4"
+    "unocss": "^66.7.0",
+    "vue-tsc": "^3.3.3"
   }
 }
