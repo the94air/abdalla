@@ -5,13 +5,13 @@ const link = computed(() => {
   return colorMode.value === 'light'
     ? [
         {
-          rel: 'shortcut icon',
+          rel: 'shortcut icon' as const,
           href: '/favicon.ico?v=4.1',
         },
       ]
     : [
         {
-          rel: 'shortcut icon',
+          rel: 'shortcut icon' as const,
           href: '/favicon-dark.ico?v=4.1',
         },
       ]
